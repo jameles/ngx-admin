@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
-
-import { MENU_ITEMS } from './pages-menu';
+import { NbMenuService } from '@nebular/theme';
+import { AuthService } from '../@core/auth/auth.service';
+import { getMenuItems } from './pages-menu';
 
 @Component({
   selector: 'ngx-pages',
-  styleUrls: ['pages.component.scss'],
   template: `
     <ngx-one-column-layout>
-      <nb-menu [items]="menu"></nb-menu>
       <router-outlet></router-outlet>
     </ngx-one-column-layout>
   `,
 })
 export class PagesComponent {
-
-  menu = MENU_ITEMS;
+  constructor(menuService: NbMenuService, auth: AuthService) {
+    const role = auth.getRole();
+    const items = getMenuItems(role ?? '');
+    menuService.addItems(items);
+  }
 }
