@@ -1,0 +1,20 @@
+<nb-card>
+  <nb-card-header>Gestion des étudiants</nb-card-header>
+  <nb-card-body>
+    <input type="file" (change)="onFileChange($event)" />
+    <div class="mt-3">
+      <input nbInput placeholder="Prénom" [(ngModel)]="newStudent.firstName" />
+      <input nbInput placeholder="Nom" [(ngModel)]="newStudent.lastName" />
+      <input nbInput placeholder="Email" [(ngModel)]="newStudent.email" />
+      <input nbInput placeholder="Promotion" [(ngModel)]="newStudent.promotion" />
+      <input nbInput placeholder="Spécialité" [(ngModel)]="newStudent.specialty" />
+      <button nbButton status="success" (click)="add()" class="ml-2">Ajouter</button>
+    </div>
+    <nb-list class="mt-3">
+      <nb-list-item *ngFor="let s of students">
+        {{ s.firstName }} {{ s.lastName }} — {{ s.email }}
+        <button nbButton status="danger" size="tiny" (click)="delete(s.id)">Supprimer</button>
+      </nb-list-item>
+    </nb-list>
+  </nb-card-body>
+</nb-card>
