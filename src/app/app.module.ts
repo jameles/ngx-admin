@@ -11,6 +11,8 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { StudentsComponent } from './pages/students/students.component';
+import { QrGenerateComponent } from './pages/qr/qr-generate.component';
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -22,7 +24,9 @@ import {
 } from '@nebular/theme';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,
+    StudentsComponent,
+    QrGenerateComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
