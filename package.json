@@ -74,6 +74,10 @@
     "tslib": "^2.3.1",
     "typeface-exo": "0.0.22",
     "web-animations-js": "^2.3.2",
+     "ngx-qrcode2": "^9.0.0",
+    "tslib": "^2.4.0",
+    "xlsx": "^0.18.5",
+    "webcam-easy": "^1.0.5"
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
