@@ -1,0 +1,15 @@
+<nb-card>
+  <nb-card-header>Génération QR Code</nb-card-header>
+  <nb-card-body>
+    <textarea
+      nbInput
+      rows="4"
+      placeholder="Texte à chiffrer"
+      [(ngModel)]="inputData"
+    ></textarea>
+    <button nbButton status="primary" (click)="generate()">Générer</button>
+    <div *ngIf="showQr" class="mt-3">
+      <ngx-qrcode [qrc-value]="encryptedData"></ngx-qrcode>
+    </div>
+  </nb-card-body>
+</nb-card>
