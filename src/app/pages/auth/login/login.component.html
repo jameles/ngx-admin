@@ -1,0 +1,9 @@
+<nb-card>
+  <nb-card-header>Connexion</nb-card-header>
+  <nb-card-body>
+    <input nbInput placeholder="Nom d’utilisateur" [(ngModel)]="username" />
+    <input nbInput placeholder="Mot de passe" [(ngModel)]="password" type="password" class="mt-2"/>
+    <button nbButton status="primary" class="mt-3 w-full" (click)="login()">Connexion</button>
+    <p *ngIf="error" class="text-danger mt-2">{{ error }}</p>
+  </nb-card-body>
+</nb-card>
