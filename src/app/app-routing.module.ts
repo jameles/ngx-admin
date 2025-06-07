@@ -1,5 +1,7 @@
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { StudentsComponent } from './pages/students/students.component';
+import { QrGenerateComponent } from './pages/qr/qr-generate.component';
 import {
   NbAuthComponent,
   NbLoginComponent,
